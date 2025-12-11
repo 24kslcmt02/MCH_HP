@@ -43,12 +43,12 @@ function App() {
         <div className="bg-white text-stone-900 font-sans selection:bg-stone-200 selection:text-black antialiased">
 
             {/* Navigation: Text Only, Minimal */}
-            <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-8 md:px-16 mix-blend-difference text-white md:text-stone-900 md:mix-blend-normal">
+            <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-8 md:px-16 mix-blend-difference text-white md:text-stone-900 md:mix-blend-normal">
                 <div
                     className="cursor-pointer hover:opacity-50 transition-opacity"
                     onClick={() => scrollTo('hero')}
                 >
-                    <img src="/logo.png" alt="M's Capital" className="h-4 md:h-6 w-auto" />
+                    <img src="/logo.jpg" alt="M's Capital" className="h-4 md:h-6 w-auto" />
                 </div>
                 <div className="flex space-x-12 text-[10px] font-medium tracking-[0.15em] uppercase hidden md:flex">
                     <button onClick={() => scrollTo('business')} className="hover:line-through decoration-stone-400 transition-all">Business</button>
@@ -218,7 +218,7 @@ function App() {
             <footer className="border-t border-stone-200 py-24 bg-stone-900 text-stone-400">
                 <div className="max-w-screen-2xl mx-auto px-8 md:px-16 flex flex-col md:flex-row justify-between items-end">
                     <div className="mb-8 md:mb-0">
-                        <h4 className="text-2xl font-semibold tracking-tighter text-white mb-2">M's Capital Inc.</h4>
+                        <h4 className="text-2xl font-semibold tracking-tighter text-white mb-2">M's Capital Holdings Inc.</h4>
                         <div className="flex flex-col space-y-1 text-xs font-mono opacity-50">
                             <span>EST. 2004</span>
                             <span>TOYOHASHI, AICHI</span>

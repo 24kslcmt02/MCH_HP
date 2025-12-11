@@ -34,8 +34,9 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          security: loose
           # ↓↓↓ ここをあなたのサーバー設定に合わせて修正しました ↓↓↓
-          server-dir: ./www/
+          server-dir: ./www/ms-capital/
           # ビルドされたファイルが入っているフォルダを指定
           local-dir: ./dist/
           dry-run: false
