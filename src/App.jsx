@@ -79,7 +79,6 @@ function App() {
 
                     <div className="flex justify-between items-end">
                         <motion.p variants={fadeInUp} className="text-xs tracking-[0.3em] text-stone-400 uppercase">
-                            Digital Business Card
                         </motion.p>
                         <motion.p variants={fadeInUp} className="text-xs tracking-[0.3em] text-stone-400 uppercase hidden md:block">
                             Est. 2004
