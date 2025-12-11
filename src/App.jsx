@@ -104,7 +104,7 @@ function App() {
                                 <div className="relative">
                                     <motion.span
                                         variants={numberVariant}
-                                        className="text-[8rem] md:text-[12rem] leading-none font-bold text-stone-100 absolute -top-16 -left-4 -z-10 select-none"
+                                        className="text-[5rem] md:text-[9rem] leading-none font-bold text-stone-100 absolute -top-16 -left-4 -z-10 select-none"
                                     >
                                         01
                                     </motion.span>
@@ -166,7 +166,7 @@ function App() {
                                 <div className="relative">
                                     <motion.span
                                         variants={numberVariant}
-                                        className="text-[8rem] md:text-[12rem] leading-none font-bold text-stone-100 absolute -top-16 -left-4 -z-10 select-none"
+                                        className="text-[5rem] md:text-[9rem] leading-none font-bold text-stone-100 absolute -top-16 -left-4 -z-10 select-none"
                                     >
                                         02
                                     </motion.span>
