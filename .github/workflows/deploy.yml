@@ -27,22 +27,16 @@ jobs:
           npm ci
           npm run build
 
-      # FTPアップロード
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
-          port: 21
-          security: loose
-          # ↓↓↓ ここをあなたのサーバー設定に合わせて修正しました ↓↓↓
-          server-dir: ./www/ms-capital/
-          # ビルドされたファイルが入っているフォルダを指定
-          local-dir: ./dist/
-          dry-run: false
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
+      # FTPアップロード (LFTPを使用)
+      - name: 📂 Sync files via LFTP
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+          lftp -f "
+          open ${{ secrets.FTP_SERVER }}
+          user ${{ secrets.FTP_USERNAME }} ${{ secrets.FTP_PASSWORD }}
+          set ssl:verify-certificate no
+          set ftp:ssl-allow no
+          mirror -R -v --parallel=4 --exclude .git/ --exclude .github/ --exclude node_modules/ ./dist/ ./www/ms-capital/
+          bye
+          "
