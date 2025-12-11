@@ -32,11 +32,14 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y lftp
-          lftp -f "
-          open ${{ secrets.FTP_SERVER }}
-          user ${{ secrets.FTP_USERNAME }} ${{ secrets.FTP_PASSWORD }}
+          lftp -c "
+          set ftp:ssl-auth TLS
+          set ftp:ssl-force true
+          set ftp:ssl-protect-data true
           set ssl:verify-certificate no
-          set ftp:ssl-allow no
-          mirror -R -v --parallel=4 --exclude .git/ --exclude .github/ --exclude node_modules/ ./dist/ ./www/ms-capital/
-          bye
+          set net:timeout 20
+          set net:max-retries 3
+          open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
+          debug 3
+          mirror -R -v --parallel=2 --exclude .git/ --exclude .github/ --exclude node_modules/ ./dist/ ./www/ms-capital/
           "
