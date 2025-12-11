@@ -71,7 +71,6 @@ function App() {
                         variants={fadeInUp}
                         className="text-6xl md:text-8xl lg:text-9xl font-semibold tracking-tighter leading-[0.9] text-stone-900 mb-12"
                     >
-                        <img src="/logo.png" alt="M's Capital Logo" className="h-8 md:h-12 w-auto mb-6 block" />
                         株式会社M's Capital Holdings<br />
                         <span className="text-stone-300 ml-2 md:ml-4 font-light"></span>
                     </motion.h1>
