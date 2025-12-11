@@ -48,7 +48,7 @@ function App() {
                     className="cursor-pointer hover:opacity-50 transition-opacity"
                     onClick={() => scrollTo('hero')}
                 >
-                    <img src="/logo.jpg" alt="M's Capital" className="h-4 md:h-6 w-auto" />
+                    <img src="/logo.png" alt="M's Capital" className="h-12 md:h-16 w-auto" />
                 </div>
                 <div className="flex space-x-12 text-[10px] font-medium tracking-[0.15em] uppercase hidden md:flex">
                     <button onClick={() => scrollTo('business')} className="hover:line-through decoration-stone-400 transition-all">Business</button>
