@@ -48,7 +48,7 @@ function App() {
                     className="cursor-pointer hover:opacity-50 transition-opacity"
                     onClick={() => scrollTo('hero')}
                 >
-                    <img src="/logo.jpg" alt="M's Capital" className="h-12 w-auto" />
+                    <img src="/logo.jpg" alt="M's Capital" className="h-8 md:h-10 w-auto" />
                 </div>
                 <div className="flex space-x-12 text-[10px] font-medium tracking-[0.15em] uppercase hidden md:flex">
                     <button onClick={() => scrollTo('business')} className="hover:line-through decoration-stone-400 transition-all">Business</button>
@@ -71,7 +71,7 @@ function App() {
                         variants={fadeInUp}
                         className="text-6xl md:text-8xl lg:text-9xl font-semibold tracking-tighter leading-[0.9] text-stone-900 mb-12"
                     >
-                        <img src="/logo.jpg" alt="M's Capital Logo" className="h-24 md:h-32 w-auto mb-8 block" />
+                        <img src="/logo.jpg" alt="M's Capital Logo" className="h-16 md:h-24 w-auto mb-6 block" />
                         株式会社M's Capital Holdings<br />
                         <span className="text-stone-300 ml-2 md:ml-4 font-light"></span>
                     </motion.h1>
