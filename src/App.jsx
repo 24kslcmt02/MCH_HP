@@ -43,7 +43,7 @@ function App() {
         <div className="bg-white text-stone-900 font-sans selection:bg-stone-200 selection:text-black antialiased">
 
             {/* Navigation: Text Only, Minimal */}
-            <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-8 md:px-16 mix-blend-difference text-white md:text-stone-900 md:mix-blend-normal">
+            <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-8 md:px-16 text-stone-900">
                 <div
                     className="cursor-pointer hover:opacity-50 transition-opacity"
                     onClick={() => scrollTo('hero')}
@@ -69,7 +69,7 @@ function App() {
                 >
                     <motion.h1
                         variants={fadeInUp}
-                        className="text-6xl md:text-8xl lg:text-9xl font-semibold tracking-tighter leading-[0.9] text-stone-900 mb-12"
+                        className="text-4xl md:text-8xl lg:text-9xl font-semibold tracking-tighter leading-[0.9] text-stone-900 mb-12"
                     >
                         株式会社M's Capital Holdings<br />
                         <span className="text-stone-300 ml-2 md:ml-4 font-light"></span>
