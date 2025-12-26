@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import Disclosure from './Disclosure';
 
 // Animation Variants
 const fadeInUp = {
@@ -31,7 +33,7 @@ const staggerContainer = {
     }
 };
 
-function App() {
+function Home() {
     const scrollTo = (id) => {
         const element = document.getElementById(id);
         if (element) {
@@ -223,13 +225,29 @@ function App() {
                             <span>TOYOHASHI, AICHI</span>
                         </div>
                     </div>
-                    <p className="text-[10px] tracking-widest uppercase opacity-40">
-                        &copy; M's Capital Holdings Inc. All Rights Reserved.
-                    </p>
+                    <div className="flex flex-col items-end space-y-4">
+                        <Link to="/disclosure" className="text-[10px] tracking-widest uppercase hover:text-white transition-colors">
+                            特定商取引法に基づく表示
+                        </Link>
+                        <p className="text-[10px] tracking-widest uppercase opacity-40">
+                            &copy; M's Capital Holdings Inc. All Rights Reserved.
+                        </p>
+                    </div>
                 </div>
             </footer>
 
         </div>
+    );
+}
+
+function App() {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/disclosure" element={<Disclosure />} />
+            </Routes>
+        </Router>
     );
 }
 
