@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://mscapital.co.jp/sitemap.xml
+Disallow: /
