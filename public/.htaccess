@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 実在するファイルやディレクトリへのリクエストはそのまま処理
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # それ以外の全リクエストを index.html にフォールバック
+  RewriteRule ^ index.html [QSA,L]
+</IfModule>
